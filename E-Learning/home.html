@@ -31,10 +31,10 @@
                     <p class="subtitle">Your journey to mastering new skills starts here.</p>
                     <p class="small-text">Join our community of 1.3M coders.</p>
                     <p class="small-text">Explore courses, connect with mentors, and enhance your skills.</p>
-                    <a href="about.html"><div class="welcome-buttons">
-                        <button class="about-us-small-screen-button">About Us</button>
+                    <div class="welcome-buttons">
+                        <a href="about.html"><button class="about-us-small-screen-button">About Us</button></a>
                         <button class="start-button" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">Get Started</button>
-                    </div></a>
+                    </div>
                 </div>
                 <div class="welcome-section-image">
                     <img src="images/welcome-image.jpg" alt="Welcome Image">
@@ -312,7 +312,7 @@
                     <form action="#" class="register-form">
                         <input type="text" placeholder="UserName" required="" />
                         <input type="password" placeholder="Password" required="" />
-                        <input type="button" value="Login" />
+                        <input type="button" value="Login" onclick="fakeLogin()" />
                         <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
                     </form>
                 </div>

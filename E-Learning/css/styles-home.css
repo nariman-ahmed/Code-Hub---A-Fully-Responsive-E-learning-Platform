@@ -488,6 +488,7 @@ footer {
         text-align: center;
         width:50%;
         margin: 2rem 0;
+        width:fit-content;
     }
 
 

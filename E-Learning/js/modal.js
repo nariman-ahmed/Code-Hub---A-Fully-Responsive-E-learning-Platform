@@ -1,3 +1,31 @@
+// --- LOGIN STATE MANAGEMENT ---
+function updateAccountButton() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const btn = document.querySelector('.create-account-btn');
+  if (!btn) return;
+  if (isLoggedIn) {
+    btn.textContent = 'My Account';
+    btn.onclick = function() { window.location.href = 'user.html'; };
+  } else {
+    btn.textContent = 'Create Account';
+    btn.onclick = function() { openModal('registerModal'); };
+  }
+}
+
+function fakeLogin() {
+  localStorage.setItem('isLoggedIn', 'true');
+  updateAccountButton();
+  closeModal();
+  window.location.href = 'user.html';
+}
+
+function fakeLogout() {
+  localStorage.removeItem('isLoggedIn');
+  window.location.href = 'home.html';
+}
+
+// Call on every page load
+window.addEventListener('DOMContentLoaded', updateAccountButton);
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   const mainContent = document.querySelector('.main-content');

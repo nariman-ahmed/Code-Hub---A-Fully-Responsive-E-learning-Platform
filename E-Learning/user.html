@@ -27,6 +27,7 @@
             <section class="user-info">
                 <img src="images/founder.jpg" alt="User Image">
                 <div class="user-details">
+                    <button class="edit-btn" type="button">Edit</button>
                     <h3>Layla Al-Mansour</h3>
                     <p><strong>Joined:</strong> February 2025</p>
                     <p><strong>Courses Completed:</strong> 4</p>
@@ -66,7 +67,7 @@
                 </div>
             </section>
 
-            <button class="logout-btn"  onclick="openModal('logoutModal')">Log Out</button>
+            <button class="logout-btn"  onclick="fakeLogout()">Log Out</button>
 
             <footer>
                 <div class="footer-content">
@@ -114,7 +115,7 @@
                     <form action="#" class="register-form">
                         <input type="text" placeholder="UserName" required="" />
                         <input type="password" placeholder="Password" required="" />
-                        <input type="button" value="Login" />
+                        <input type="button" value="Login" onclick="fakeLogin()" />
                         <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
                     </form>
                 </div>
