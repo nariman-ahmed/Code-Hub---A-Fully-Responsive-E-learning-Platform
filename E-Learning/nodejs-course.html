@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Backend Course</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles-courses.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+
+    <body>
+        <header> 
+            <div class="logo"><a href="home.html"><img src="images/app-logo2.png" alt="Logo"></a></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </div>
+            <button class="create-account-btn"  onclick="openModal('registerModal')">Create Account</button>
+        </header>
+
+        <main class="main-content">
+            <section class="course-title">
+                <h1>Backend Web Development Course</h1>
+            </section>
+
+            <section class="course-description">
+                <img src="images/back-end-course.png" alt="Backend Course Image">
+                <div class="course-details">
+                    <h2>Course Overview</h2>
+                    <p>This course introduces you to backend web development using Node.js and Express.js. You will learn how to build server-side applications, handle HTTP requests, manage databases, and create APIs.</p>
+                    <p>By the end of this course, you will be able to develop robust backend systems and integrate them with front-end applications.</p>
+                </div>
+            </section>    
+
+            <section class="course-content">
+                <h2>Course Videos</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/zb3Qk8SG5Ms/hqdefault.jpg" alt="Backend Course Video 1 Thumbnail" data-video-id="zb3Qk8SG5Ms" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/OIBIXYLJjsI/hqdefault.jpg" alt="Backend Course Video 2 Thumbnail" data-video-id="OIBIXYLJjsI" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/-HPZ1leCV8k/hqdefault.jpg" alt="Backend Course Video 3 Thumbnail" data-video-id="-HPZ1leCV8k" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/DQD00NAUPNk/hqdefault.jpg" alt="Backend Course Video 4 Thumbnail" data-video-id="DQD00NAUPNk" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/bdHE2wHT-gQ/hqdefault.jpg" alt="Backend Course Video 5 Thumbnail" data-video-id="bdHE2wHT-gQ" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/Lr9WUkeYSA8/hqdefault.jpg" alt="Backend Course Video 6 Thumbnail" data-video-id="Lr9WUkeYSA8" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/yXEesONd_54/hqdefault.jpg" alt="Backend Course Video 7 Thumbnail" data-video-id="yXEesONd_54" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/_GJKAs7A0_4/hqdefault.jpg" alt="Backend Course Video 8 Thumbnail" data-video-id="_GJKAs7A0_4" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/bxsemcrY4gQ/hqdefault.jpg" alt="Backend Course Video 9 Thumbnail" data-video-id="bxsemcrY4gQ" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/VVGgacjzc2Y/hqdefault.jpg" alt="Backend Course Video 10 Thumbnail" data-video-id="VVGgacjzc2Y" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/zW_tZR0Ir3Q/hqdefault.jpg" alt="Backend Course Video 11 Thumbnail" data-video-id="zW_tZR0Ir3Q" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/nYAyhRAV87A/hqdefault.jpg" alt="Backend Course Video 12 Thumbnail" data-video-id="nYAyhRAV87A" onclick="showVideoModal(this)">
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Wishing you a great learning experience!</h3>
+                        <p class="author-credit">by Nariman Ahmed</p>
+                        <p class="footer-contact-us"><a href="contact-us.html">Contact Us</a></p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="video-modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+            <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Join us today!</span>
+                        <p>Sign up now to become a member.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="Enter UserName" required="" />
+                        <input type="email" placeholder="Enter Emaill" required="" />
+                        <input type="password" placeholder="Choose A Password" required="" />
+                        <input type="password" placeholder="Re-Enter Password" required="" />
+                        <input type="button" value="Sign up" />
+                        <span> Already a member? <a href="#" onclick="showLoginModal()">Login Here</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="register-div login-div">
+                    <div class="register-header">
+                        <span>Welcome Back!</span>
+                        <p>We're happy you're here.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="UserName" required="" />
+                        <input type="password" placeholder="Password" required="" />
+                        <input type="button" value="Login" />
+                        <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/modal.js"></script>
+
+    </body>
+</html>

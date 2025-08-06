@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9ecef ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: #e9ecef ;
+    font-family: 'Outfit', sans-serif;
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo img {
+    height: 3rem;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+    font-weight: 1000;
+}
+
+.create-account-btn {
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+    background-color: #0171e8;
+    color: white;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-weight: 1000;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+.create-account-btn:hover {
+    background-color: #0056b3;
+}
+
+.create-account-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Remove underlines from all links */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Remove bullet points from all lists */
+ul {
+    list-style: none;
+}
+
+/* Main content area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Welcome section styles */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+    padding: 2rem 4rem;
+    padding-top:0;
+    font-family: 'Outfit', sans-serif;
+    background: #e9ecef ;
+
+    color: #333;
+    transition: all 0.3s ease;
+    margin-top: -1.5rem;
+}
+
+.welcome-section-text {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 0;
+    margin-top: -2rem;
+}
+
+.welcome-section-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: -0.5rem;
+    color: #1a1a1a;
+}
+
+.welcome-section-text .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}
+
+.welcome-section-text .small-text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: -1rem;
+    color: #4a4a4a;
+}
+
+.welcome-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-us-small-screen-button, .start-button{
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 123, 255, 0.2);
+    margin-top: 1rem;
+    white-space: nowrap;      /* Prevents text from wrapping */
+}
+
+.about-us-small-screen-button {
+    display: none;
+}
+
+
+
+.start-button:hover, .about-us-small-screen-button:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.75rem 2rem rgba(0, 123, 255, 0.3);
+}
+
+.welcome-section-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-section-image img {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    margin-top: 0;
+}
+
+/* Courses section styles */
+.courses-section {
+    padding: 3rem 2rem;
+    padding-bottom: 7rem;
+    background: #fff;
+    font-family: 'Outfit', sans-serif;
+}
+
+.courses-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+    width: 100%;
+    height: 20rem;
+    overflow: visible;
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.course-image img {
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.course-card:hover .course-image img {
+    transform: scale(1.05);
+}
+
+.course-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.course-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.course-duration {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-duration::before {
+    content: "⏱️";
+    font-size: 0.8rem;
+}
+
+.course-start-btn{
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.course-start-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.course-start-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 123, 255, 0.3);
+}
+
+/* Testimonials section styles */
+.testimonials-section {
+    background-color: #e9ecef;
+    padding: 4rem 2rem 0 2rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Outfit', sans-serif;
+    min-height: 200px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    display: flex;
+    gap: 0.125rem;
+    color: rgb(238, 203, 8);
+    margin-bottom: 1rem;
+}
+
+.star {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.infos {
+    margin-bottom: 1rem;
+}
+
+.date-time {
+    color: rgba(7, 63, 216, 1);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    line-height: 1.625;
+    color: rgba(107, 114, 128, 1);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.author {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgba(107, 114, 128, 1);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Remove the old card styles since we're using testimonial-card now */
+.card {
+    display: none;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 1.5rem 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: white;
+    line-height: 1.3;
+}
+
+.author-credit {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-contact-us {
+    display: none;
+}
+
+/* Medium screens */
+@media (max-width: 830px) {
+
+    header {
+        flex-direction: row;
+        gap: 0;
+        padding: 2rem 2rem 0 2rem;
+        margin: 0 2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .logo {
+        flex: 0 0 auto;
+    }
+    
+    .create-account {
+        flex: 0 0 auto;
+    }
+    
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+        margin: 0 2rem;
+    }
+    
+    .welcome-section-text {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 0;
+    }
+    
+    .welcome-section-text h1 {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    
+    .welcome-section-text .subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .welcome-section-image {
+        max-width: 100%;
+        order: -1;
+    }
+    
+    .welcome-section-image img {
+        max-width: 80%;
+    }
+
+    .start-button, .about-us-small-screen-button {
+        font-size: 0.9rem;
+        text-align: center;
+        width:50%;
+        margin: 2rem 0;
+    }
+
+
+    .about-us-small-screen-button {
+        display: inline;
+    }
+    
+    .courses-section {
+        padding: 0 1rem 3rem 1rem;
+    }
+
+    .courses-section h2 {
+        font-size: 1.75rem;
+        margin-top: 3rem;
+    }
+    
+    .course-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 2.5rem;
+        padding:0 2rem;
+    }
+    
+    .course-card {
+        max-width: 100%;
+    }
+    
+    .testimonials-section {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+    
+    .testimonials-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 1.5rem;
+        margin-top:2rem;
+        padding:0 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    footer {
+        padding: 1rem 1rem;
+        margin-top: 0;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.25rem;
+    }
+    
+    .author-credit {
+        font-size: 0.85rem;
+    }
+
+    .footer-contact-us {
+        font-size: 0.8rem;
+    }
+
+    .footer-contact-us {
+        display: block;
+        margin-top: 0.5rem;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+    }
+}
+

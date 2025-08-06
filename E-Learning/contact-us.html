@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles-contact.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+
+    <body>
+        <header> 
+            <div class="logo"><a href="home.html"><img src="images/app-logo2.png" alt="Logo"></a></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </div>
+            <button class="create-account-btn"  onclick="openModal('registerModal')">Create Account</button>
+        </header>
+
+        <div class="main-content">
+            <div class="contact-us-text">
+                <h1>Contact Us</h1>
+                <p>Email us, give us a call, or fill out the form to learn how Code Hub can support your coding journey.</p>
+                <p>support@codehub.io</p>
+                <p>(+123) 456-7890</p>
+                <div class="contact-cards-section">  
+                    <div class="contact-card">
+                        <h3>Student Support</h3>
+                        <p>Our support team is here to assist you 24/7 with any questions about courses, accounts, or using the platform.</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Feedback and Suggestions</h3>
+                        <p>We love hearing from our learners! Your feedback helps us improve Code Hub and build a better experience for aspiring coders everywhere.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-us-form-section">
+                <form class="contact-us-form">
+                    <h2>Get in Touch</h2>
+                    <p>We won't leave you on delivered</p>
+                        <div class="user-data">
+                        <label>
+                            <input required="" placeholder="" type="text" class="input">
+                            <span>Firstname</span>
+                        </label>
+                
+                        <label>
+                            <input required="" placeholder="" type="text" class="input">
+                            <span>Lastname</span>
+                        </label>
+                    </div>  
+                            
+                    <label>
+                        <input required="" placeholder="" type="email" class="input">
+                        <span>Email</span>
+                    </label> 
+                        
+                    <label>
+                        <textarea required class="input help-message" placeholder=""></textarea>
+                        <span>What can we help you with?</span>
+                    </label>
+                    <button class="submit">Submit</button>
+                    <p class="signin">Already have an acount? <a href="#">Sign-in</a> </p>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wishing you a great learning experience!</h3>
+                    <p class="author-credit">by Nariman Ahmed</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Join us today!</span>
+                        <p>Sign up now to become a member.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="Enter UserName" required="" />
+                        <input type="email" placeholder="Enter Emaill" required="" />
+                        <input type="password" placeholder="Choose A Password" required="" />
+                        <input type="password" placeholder="Re-Enter Password" required="" />
+                        <input type="button" value="Sign up" />
+                        <span> Already a member? <a href="#" onclick="showLoginModal()">Login Here</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Welcome Back!</span>
+                        <p>We're happy you're here.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="UserName" required="" />
+                        <input type="password" placeholder="Password" required="" />
+                        <input type="button" value="Login" />
+                        <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/modal.js"></script>
+
+    </body>

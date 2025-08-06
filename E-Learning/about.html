@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles-about.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo"><a href="home.html"><img src="images/app-logo2.png" alt="Logo"></a></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </div>
+            <button class="create-account-btn"  onclick="openModal('registerModal')">Create Account</button>
+        </header>
+
+        <main class="main-content">
+            <div class="section intro">
+                <div class="section-text">
+                    <h1>Everyone can code. They just need the right start.</h1>
+                    <p>At Code Hub, we believe that learning to code shouldn’t be overwhelming or expensive. Whether you're an absolute beginner or someone picking up a new language, we’re here to guide you through the journey with hands-on learning and real-world projects.</p>
+                </div>
+                <div class="section-image">
+                    <img src="images/about-us-intro.jpg" alt="About Code Hub">
+                </div>
+            </div>
+
+            <div class="section mission">
+                <div class="section-text">
+                    <h1>Our Mission</h1>
+                    <p>To make high-quality coding education accessible, engaging, and beginner-friendly, all for free.</p>
+                    <p>We’re building a space where anyone, regardless of their background, can start learning to code and unlock new opportunities.</p>
+                </div>
+                <div class="section-image">
+                    <img src="images/mission-vision.jpg" alt="About Code Hub">
+                </div>
+            </div>
+
+            <div class="section vision">
+                <div class="section-text">
+                    <h1>Our Vision</h1>
+                    <p>Code Hub started in 2024 as a simple idea: to collect the best free resources and organize them into structured, beginner-friendly courses. What began as a small side project quickly grew into a learning platform used by thousands of learners looking for a practical and approachable way to code.</p>
+                    <p>Today, we host curated content, offer hands-on practice, and continue to grow our global community of learners and mentors.</p>
+                </div>
+                <div class="section-image">
+                    <img src="images/vision.jpg" alt="About Code Hub">
+                </div>
+            </div>
+
+            <div class="section values">
+                <h1>What makes us different?</h1>
+                <ul>
+                    <li><strong>Accessibility:</strong> We believe everyone should have access to quality coding education.</li>
+                    <li><strong>Community:</strong> Learning is better together. We foster a supportive environment for learners to connect and grow.</li>
+                    <li><strong>Innovation:</strong> We embrace new technologies and teaching methods to keep our content relevant and engaging.</li>
+                    <li><strong>Integrity:</strong> We are committed to providing honest, unbiased information and resources.</li>
+                </ul>
+            </div>
+
+            <div class="section founder">
+                <div class="founder-image section-image">
+                <img src="images/founder.jpg" alt="Founder Image">
+                </div>
+                <div class="founder-info section-text">
+                    <h2>Meet the Founder</h2>
+                    <p>Hi, I'm Nariman Ahmed, the creator of Code Hub. I built this platform because I once struggled to find a clear, affordable path to learn programming. My goal was simple: make coding feel less scary and more achievable — especially for beginners.</p>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Wishing you a great learning experience!</h3>
+                        <p class="author-credit">by Nariman Ahmed</p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Join us today!</span>
+                        <p>Sign up now to become a member.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="Enter UserName" required="" />
+                        <input type="email" placeholder="Enter Emaill" required="" />
+                        <input type="password" placeholder="Choose A Password" required="" />
+                        <input type="password" placeholder="Re-Enter Password" required="" />
+                        <input type="button" value="Sign up" />
+                        <span> Already a member? <a href="#" onclick="showLoginModal()">Login Here</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Welcome Back!</span>
+                        <p>We're happy you're here.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="UserName" required="" />
+                        <input type="password" placeholder="Password" required="" />
+                        <input type="button" value="Login" />
+                        <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/modal.js"></script>
+
+    </body>
+
+    

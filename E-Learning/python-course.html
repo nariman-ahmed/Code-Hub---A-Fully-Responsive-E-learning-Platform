@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles-courses.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+
+    <body>
+        <header> 
+            <div class="logo"><a href="home.html"><img src="images/app-logo2.png" alt="Logo"></a></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </div>
+            <button class="create-account-btn"  onclick="openModal('registerModal')">Create Account</button>
+        </header>
+
+        <main class="main-content">
+            <section class="course-title">
+                <h1>Python Course</h1>
+            </section>
+
+            <section class="course-description">
+                <img src="images/python-course.png" alt="Python Course Image">
+                <div class="course-details">
+                    <h2>Course Overview</h2>
+                    <p>This course is designed to introduce you to Python programming. You will learn the basics of Python, including syntax, data types, control structures, functions, and more.</p>
+                    <p>By the end of this course, you will be able to write simple Python programs and understand the fundamentals of programming in Python.</p>
+                </div>
+            </section>    
+
+            <section class="course-content">
+                <h2>Course Videos</h2>
+                <!-- embedd youtube videos and organize as grid -->
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/GmdGv5ndX54/hqdefault.jpg" alt="Python Course Video 1 Thumbnail" data-video-id="GmdGv5ndX54" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/HFKKyr9yrGE/hqdefault.jpg" alt="Python Course Video 2 Thumbnail" data-video-id="HFKKyr9yrGE" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/ubpKGsHWSR8/hqdefault.jpg" alt="Python Course Video 3 Thumbnail" data-video-id="ubpKGsHWSR8" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/k_GXj1T3KSA/hqdefault.jpg" alt="Python Course Video 4 Thumbnail" data-video-id="k_GXj1T3KSA" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/FLoNn_3nNjA/hqdefault.jpg" alt="Python Course Video 5 Thumbnail" data-video-id="FLoNn_3nNjA" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/14QZlmRXQDo/hqdefault.jpg" alt="Python Course Video 6 Thumbnail" data-video-id="14QZlmRXQDo" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/kUTj94Vfndg/hqdefault.jpg" alt="Python Course Video 7 Thumbnail" data-video-id="kUTj94Vfndg" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/TH6a9q9YziA/hqdefault.jpg" alt="Python Course Video 8 Thumbnail" data-video-id="TH6a9q9YziA" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/-AXV5uSpHlQ/hqdefault.jpg" alt="Python Course Video 9 Thumbnail" data-video-id="-AXV5uSpHlQ" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/Nwh-DQKqKZg/hqdefault.jpg" alt="Python Course Video 10 Thumbnail" data-video-id="Nwh-DQKqKZg" onclick="showVideoModal(this)">
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Wishing you a great learning experience!</h3>
+                        <p class="author-credit">by Nariman Ahmed</p>
+                        <p class="footer-contact-us"><a href="contact-us.html">Contact Us</a></p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="video-modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <iframe id="videoIframe" src="https://www.youtube.com/embed/GmdGv5ndX54" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+            <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Join us today!</span>
+                        <p>Sign up now to become a member.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="Enter UserName" required="" />
+                        <input type="email" placeholder="Enter Emaill" required="" />
+                        <input type="password" placeholder="Choose A Password" required="" />
+                        <input type="password" placeholder="Re-Enter Password" required="" />
+                        <input type="button" value="Sign up" />
+                        <span> Already a member? <a href="#" onclick="showLoginModal()">Login Here</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="register-div login-div">
+                    <div class="register-header">
+                        <span>Welcome Back!</span>
+                        <p>We're happy you're here.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="UserName" required="" />
+                        <input type="password" placeholder="Password" required="" />
+                        <input type="button" value="Login" />
+                        <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/modal.js"></script>
+
+
+    </body>

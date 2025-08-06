@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles-courses.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+
+    <body>
+        <header> 
+            <div class="logo"><a href="home.html"><img src="images/app-logo2.png" alt="Logo"></a></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                </ul>
+            </div> 
+            <button class="create-account-btn"  onclick="openModal('registerModal')">Create Account</button>
+        </header>
+
+        <main class="main-content">
+            <section class="course-title">
+                <h1>Front-End Web Development Course</h1>
+            </section>
+
+            <section class="course-description">
+                <img src="images/front-end-course.jpg" alt="Frontend Course Image">
+                <div class="course-details">
+                    <h2>Course Overview</h2>
+                    <p>This course introduces you to the fundamentals of front-end web development using HTML and CSS. You will learn how to structure web pages with HTML elements like paragraphs, headings, and lists, and style them with CSS properties for layout, colors, and typography.</p>
+                    <p>By the end of this course, you will be able to build responsive web pages and understand the basics of front-end design and development.</p>
+                </div>
+            </section>    
+
+            <section class="course-content">
+                <h2>Course Videos</h2>
+                <!-- embedd youtube videos and organize as grid -->
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/LGQuIIv2RVA/hqdefault.jpg" alt="Front-End Course Video 1 Thumbnail" data-video-id="LGQuIIv2RVA" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/V8UAEoOvqFg/hqdefault.jpg" alt="Front-End Course Video 2 Thumbnail" data-video-id="V8UAEoOvqFg" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/yqcd-XkxZNM/hqdefault.jpg" alt="Front-End Course Video 3 Thumbnail" data-video-id="yqcd-XkxZNM" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/gW6cBZLUk6M/hqdefault.jpg" alt="Front-End Course Video 4 Thumbnail" data-video-id="gW6cBZLUk6M" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/tsEQgGjSmkM/hqdefault.jpg" alt="Front-End Course Video 5 Thumbnail" data-video-id="tsEQgGjSmkM" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/ta3Oxx7Yqbo/hqdefault.jpg" alt="Front-End Course Video 6 Thumbnail" data-video-id="ta3Oxx7Yqbo" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/TZTaGTQKl2I/hqdefault.jpg" alt="Front-End Course Video 7 Thumbnail" data-video-id="TZTaGTQKl2I" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/JVsI0fspik8/hqdefault.jpg" alt="Front-End Course Video 8 Thumbnail" data-video-id="JVsI0fspik8" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/d2bzap43cNQ/hqdefault.jpg" alt="Front-End Course Video 9 Thumbnail" data-video-id="d2bzap43cNQ" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/CAPPO0r0DIQ/hqdefault.jpg" alt="Front-End Course Video 10 Thumbnail" data-video-id="CAPPO0r0DIQ" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/M6coJNLFBWI/hqdefault.jpg" alt="Front-End Course Video 11 Thumbnail" data-video-id="M6coJNLFBWI" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/33IinMVJf-M/hqdefault.jpg" alt="Front-End Course Video 12 Thumbnail" data-video-id="33IinMVJf-M" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/Elg66-ASVXg/hqdefault.jpg" alt="Front-End Course Video 13 Thumbnail" data-video-id="Elg66-ASVXg" onclick="showVideoModal(this)">
+                    </div>
+                    <div class="video-item">
+                        <img class="video-thumbnail" src="https://img.youtube.com/vi/t3wsQnjM4F4/hqdefault.jpg" alt="Front-End Course Video 14 Thumbnail" data-video-id="t3wsQnjM4F4" onclick="showVideoModal(this)">
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Wishing you a great learning experience!</h3>
+                        <p class="author-credit">by Nariman Ahmed</p>
+                        <p class="footer-contact-us"><a href="contact-us.html">Contact Us</a></p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="video-modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <iframe id="videoIframe" src="https://www.youtube.com/embed/GmdGv5ndX54" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+            <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+                <div class="register-div">
+                    <div class="register-header">
+                        <span>Join us today!</span>
+                        <p>Sign up now to become a member.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="Enter UserName" required="" />
+                        <input type="email" placeholder="Enter Emaill" required="" />
+                        <input type="password" placeholder="Choose A Password" required="" />
+                        <input type="password" placeholder="Re-Enter Password" required="" />
+                        <input type="button" value="Sign up" />
+                        <span> Already a member? <a href="#" onclick="showLoginModal()">Login Here</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="register-div login-div">
+                    <div class="register-header">
+                        <span>Welcome Back!</span>
+                        <p>We're happy you're here.</p>
+                    </div>
+                    <form action="#" class="register-form">
+                        <input type="text" placeholder="UserName" required="" />
+                        <input type="password" placeholder="Password" required="" />
+                        <input type="button" value="Login" />
+                        <span class="register-link">Not a member? <a href="#" onclick="showRegisterModal()">Sign up</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/modal.js"></script>
+
+
+    </body>
