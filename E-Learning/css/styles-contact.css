@@ -463,6 +463,11 @@ footer {
         align-items: center;
     }
 
+    header {
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+
     .nav-links {
         display: none;
     }

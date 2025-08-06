@@ -215,7 +215,7 @@ main {
 footer {
     background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
     color: white;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -239,6 +239,14 @@ footer {
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
     font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact-us a{
+    color: black;
+    text-decoration: none;
+    padding-bottom: 0;
+    padding-top: 2rem;
 }
 
 @media (max-width: 1060px) {
@@ -333,6 +341,17 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    .footer-contact-us a {
+        font-size: 0.9rem;
+        padding-top:0;
+    }
+
+    footer {
+        padding: 0.8rem 0;
+
+    }
+
 }
 
 @media (max-width:600px){
@@ -402,4 +421,8 @@ footer {
     .author-credit {
         font-size: 0.85rem;
     }
+
+    .footer-contact-us a {
+        font-size: 0.8rem;
+        }
 }

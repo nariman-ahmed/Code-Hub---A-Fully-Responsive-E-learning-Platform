@@ -121,8 +121,12 @@ ul {
     font-size: 1rem;
 }
 
-.create-account-btn:hover, .logout-btn:hover {
+.create-account-btn:hover {
     background-color: #0056b3;
+}
+
+.logout-btn:hover {
+    background-color: #af2230;
 }
 
 .create-account-btn a, .logout-btn a {
@@ -246,8 +250,6 @@ footer {
     color: white;
     padding:0.7rem 0;
     font-family: 'Outfit', sans-serif;
-    width: 100%;
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -321,9 +323,13 @@ footer {
         font-size: 0.85rem;
     }
 
+    .footer-contact-us a {
+        font-size: 90%;;
+    }
+
     .logout-btn {
         width: fit-content;
-        margin-left: 2rem;
+        margin-left: 4rem;
     }
 }
 
