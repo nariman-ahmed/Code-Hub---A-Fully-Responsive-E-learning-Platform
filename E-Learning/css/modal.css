@@ -1,3 +1,22 @@
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+/* Ensure modal-content and video-modal-content are positioned relative for absolute children */
+.modal-content,
+.video-modal-content {
+  position: relative;
+}
 
 /* Modal container (hidden by default) */
 .modal {
@@ -5,13 +24,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   z-index: 1000;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 /* Modal content */
@@ -19,20 +39,27 @@
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  width:fit-content;
+  width: fit-content;
   max-width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
   box-sizing: border-box;
 }
 
 /* Video modal content (larger for video) */
 .video-modal-content {
-  max-width: 1200px; /* Larger for video player */
-  padding: 0; /* Remove padding for full-width video */
+  max-width: 900px; /* Slightly less than 100vw for centering */
+  padding: 0;
   width: 90vw;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
   box-sizing: border-box;
 }
 
@@ -116,6 +143,8 @@
   height: 450px; /* Standard YouTube aspect ratio */
   border: none;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
