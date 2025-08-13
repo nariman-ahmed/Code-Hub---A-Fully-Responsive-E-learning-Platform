@@ -4,8 +4,11 @@
 A modern, responsive E-Learning platform built with HTML, CSS, and JavaScript, offering programming and web development courses. The platform focuses on delivering a clean design, smooth animations, and an intuitive user interface for an engaging learning experience.
 
 ## 🎥 Demo
-You can view the live demo here: [**Demo Link**](#)  
-*(Replace `#` with your actual demo URL)*
+You can view the live demo here: 
+
+https://github.com/user-attachments/assets/eaae48a2-62cf-49b0-9d67-6afb62520ceb
+
+
 
 ## ✨ Main Features
 
