@@ -41,7 +41,8 @@ function closeModal() {
   const modals = [
     document.getElementById('registerModal'),
     document.getElementById('loginModal'),
-    document.getElementById('videoModal')
+    document.getElementById('videoModal'),
+    document.getElementById('editModal')
   ];
   const mainContent = document.querySelector('.main-content');
   modals.forEach(modal => {
@@ -116,9 +117,10 @@ window.onclick = function(event) {
   const modals = {
     registerModal: document.getElementById('registerModal'),
     loginModal: document.getElementById('loginModal'),
-    videoModal: document.getElementById('videoModal')
+    videoModal: document.getElementById('videoModal'),
+    editModal: document.getElementById('editModal')
   };
-  if (event.target === modals.registerModal || event.target === modals.loginModal || event.target === modals.videoModal) {
+  if (event.target === modals.registerModal || event.target === modals.loginModal || event.target === modals.videoModal || event.target === modals.editModal) {
     closeModal();
   }
 };
@@ -129,3 +131,17 @@ document.addEventListener('keydown', function(event) {
     closeModal();
   }
 });
+
+// Profile picture preview functionality
+function previewProfilePic(input) {
+  const preview = document.getElementById('profile-preview');
+  const file = input.files[0];
+  
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      preview.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+}

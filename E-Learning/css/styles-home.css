@@ -5,7 +5,8 @@
 }
 
 body {
-    background: #e9ecef ;
+    background: #e9ecef;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -46,6 +47,7 @@ header {
     font-weight: 1000;
 }
 
+/* Enhanced button animations */
 .create-account-btn {
     flex: 0 0 auto;
     padding: 0.5rem 1rem;
@@ -57,10 +59,30 @@ header {
     font-weight: 1000;
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.create-account-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.create-account-btn:hover::before {
+    left: 100%;
 }
 
 .create-account-btn:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(1, 113, 232, 0.3);
 }
 
 .create-account-btn a {
@@ -77,6 +99,62 @@ a {
 /* Remove bullet points from all lists */
 ul {
     list-style: none;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Main content area */
@@ -110,6 +188,7 @@ ul {
     gap: 1rem;
     padding-left: 0;
     margin-top: -2rem;
+    animation: fadeInLeft 1s ease-out;
 }
 
 .welcome-section-text h1 {
@@ -119,24 +198,36 @@ ul {
     margin: 0;
     margin-bottom: -0.5rem;
     color: #1a1a1a;
+    animation: fadeInUp 1.2s ease-out 0.2s both;
 }
 
-.welcome-section-text .subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.6;
-    margin: 0;
-    margin-bottom: 1rem;
-    color: #4a4a4a;
-}
-
-.welcome-section-text .small-text {
+.welcome-section-text p {
     font-size: 1.25rem;
-    font-weight: 400;
     line-height: 1.6;
+    color: #666;
     margin: 0;
-    margin-bottom: -1rem;
-    color: #4a4a4a;
+    animation: fadeInUp 1.2s ease-out 0.4s both;
+}
+
+.welcome-section-image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    animation: fadeInRight 1s ease-out 0.3s both;
+}
+
+.welcome-section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.welcome-section-image img:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 .welcome-buttons {
@@ -173,24 +264,6 @@ ul {
     box-shadow: 0 0.75rem 2rem rgba(0, 123, 255, 0.3);
 }
 
-.welcome-section-image {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.welcome-section-image img {
-    width: 90%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-    object-fit: cover;
-    margin-top: 0;
-}
-
 /* Courses section styles */
 .courses-section {
     padding: 3rem 2rem;
@@ -205,6 +278,7 @@ ul {
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 3rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .course-grid {
@@ -220,13 +294,20 @@ ul {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
+    opacity: 0;
+    animation: scaleIn 0.8s ease-out forwards;
 }
 
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+.course-card:nth-child(4) { animation-delay: 0.4s; }
+
 .course-card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.5rem) scale(1.02);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
 .course-image {
@@ -245,9 +326,8 @@ ul {
     height: 90%;
     width: auto;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     max-width: 100%;
-    max-height: 100%;
 }
 
 .course-card:hover .course-image img {
@@ -334,20 +414,24 @@ ul {
 }
 
 .testimonial-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 2rem;
+    background: white;
     border-radius: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     font-family: 'Outfit', sans-serif;
     min-height: 200px;
+    opacity: 0;
+    animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
 .testimonial-card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.5rem) scale(1.02);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
 .stars {

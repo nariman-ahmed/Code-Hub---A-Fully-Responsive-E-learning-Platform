@@ -42,14 +42,69 @@
     box-sizing: border-box;
 }
 
+/* Animation keyframes for user page */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     font-family: 'Outfit', sans-serif;
-    background: #e9ecef;
-    background-color: #fff;
+    background: #ffffff;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 
@@ -121,12 +176,8 @@ ul {
     font-size: 1rem;
 }
 
-.create-account-btn:hover {
+.create-account-btn:hover, .logout-btn:hover {
     background-color: #0056b3;
-}
-
-.logout-btn:hover {
-    background-color: #af2230;
 }
 
 .create-account-btn a, .logout-btn a {
@@ -139,7 +190,7 @@ ul {
     background-color: #dc3545;
     width:fit-content;
     padding: 0.5rem 2rem;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-left: 2rem;
 }   
 
@@ -147,27 +198,42 @@ ul {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 0 3rem;
+    animation: fadeInUp 1s ease-out;
+    margin: 0 2rem;
 }
-
 
 .user-info {
     display: flex;
-    flex-direction: row;
-    margin: 5% 8%;
-    gap:2%;
-    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    animation: slideInFromLeft 1s ease-out 0.2s both;
+    transition: all 0.4s ease;
 }
 
-.user-info img{
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    display: block;
-    margin: 0 1.5rem 0 0;
+.user-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+}
+
+.user-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e9ecef;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.user-info:hover img {
+    transform: scale(1.05);
+    border-color: #0171e8;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .user-details {
@@ -187,6 +253,7 @@ ul {
 
 .finished-courses, .ongoing-courses {
     margin: 2rem 0;
+    animation: slideInFromRight 1s ease-out 0.4s both;
 }
 
 .finished-courses h2, .ongoing-courses h2 {
@@ -194,13 +261,14 @@ ul {
     margin-bottom: 1.2rem;
     color: #0171e8;
     margin-left: 2rem;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .course-list {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    padding : 0 2rem 2rem 2rem
+    padding : 0 2rem 2rem 2rem;
 }
 
 .course-item {
@@ -215,6 +283,19 @@ ul {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.course-item:nth-child(1) { animation-delay: 0.6s; }
+.course-item:nth-child(2) { animation-delay: 0.7s; }
+.course-item:nth-child(3) { animation-delay: 0.8s; }
+.course-item:nth-child(4) { animation-delay: 0.9s; }
+
+.course-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .course-item img {
@@ -224,6 +305,11 @@ ul {
     border-radius: 0.7rem;
     margin-bottom: 1rem;
     background: #f5f5f5;
+    transition: all 0.4s ease;
+}
+
+.course-item:hover img {
+    transform: scale(1.1);
 }
 
 .course-list a {
@@ -250,6 +336,8 @@ footer {
     color: white;
     padding:0.7rem 0;
     font-family: 'Outfit', sans-serif;
+    width: 100%;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -306,8 +394,9 @@ footer {
     }
     .course-list {
         gap: 1rem;
-        justify-content: center;
     }
+
+
     .ongoing-courses h2, .finished-courses h2 {
         font-size: 1.3rem;
         margin-left:4rem;
@@ -315,6 +404,7 @@ footer {
     .logout-btn {
         width: 20%;
         margin-left: 4rem;
+        margin-bottom: 10%;
     }
     .footer-section h3 {
         font-size: 1.2rem;
@@ -323,13 +413,9 @@ footer {
         font-size: 0.85rem;
     }
 
-    .footer-contact-us a {
-        font-size: 90%;;
-    }
-
     .logout-btn {
         width: fit-content;
-        margin-left: 4rem;
+        margin-left: 2rem;
     }
 }
 
@@ -356,6 +442,8 @@ footer {
         flex-direction: column;
         gap: 1.7rem;
         padding-bottom: 1rem;
+        align-items: center;
+
     }
     .course-item {
         min-width: 0;
@@ -366,6 +454,7 @@ footer {
     .logout-btn {
         width: fit-content;
         margin-left: 2rem;
+        margin-bottom: 5rem;
     }
     .footer-section h3 {
         font-size: 1.2rem;
